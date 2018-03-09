@@ -28,11 +28,6 @@ fun isMember e set =
         then SOME e
         else isMember e set';
 
-fun elem x set =
-  case isMember x set of
-    NONE => false
-  | SOME _ => true;
-
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
   | stringifyCharSet (Set(y, ys)) = Char.toString(y) ^ " " ^ stringifyCharSet(ys);
