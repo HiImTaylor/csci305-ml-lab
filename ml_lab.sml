@@ -9,14 +9,29 @@
 
 (* Define your data type and functions here *)
 (*Function used in question 1*)
-| f (x::xs) = (x + 1) :: (f xs); (*Bind x to the head of the int list, and xs to the tail. Then, add one to the head and recursively call the function on the tail.*)
 fun f [] = [] (*Define the function. The function will take in an int list and output a different int list*)
+| f (x::xs) = (x + 1) :: (f xs); (*Bind x to the head of the int list, and xs to the tail. Then, add one to the head and recursively call the function on the tail.*)
 
 (*Construct a datatype to represent sets, called set, with two different types: Set and Empty.
  * Where Set is of type 'element * 'element set, meaning that it holds some polymorphic type 'element
  * and a sets of 'element.*)
+dataype 'element set =
+    Empty
+  | Set of 'element * 'element set;
 
+(*This function will determine if an element 'e' is part of the set, set. It will return true if 'e' is a memeber of the set, set. Otherwise, it will return false.*)
+fun isMember e set =
+  case set
+      of Empty => NONE
+      | e'::set' =>
+        if e = e'
+        then SOME e
+        else isMember e set';
 
+fun elem x set =
+  case isMember x set of
+    NONE => false
+  | SOME _ => true;
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
