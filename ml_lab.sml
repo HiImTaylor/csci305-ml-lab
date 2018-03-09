@@ -2,12 +2,21 @@
 *
 * CSCI 305 - ML Programming Lab
 *
-* <firstname> <lastname>
-* <email-address>
+* Taylor Koth
+* taylorkoth@gmail.com
 *
 ***************************************************************)
 
 (* Define your data type and functions here *)
+(*Function used in question 1*)
+| f (x::xs) = (x + 1) :: (f xs); (*Bind x to the head of the int list, and xs to the tail. Then, add one to the head and recursively call the function on the tail.*)
+fun f [] = [] (*Define the function. The function will take in an int list and output a different int list*)
+
+(*Construct a datatype to represent sets, called set, with two different types: Set and Empty.
+ * Where Set is of type 'element * 'element set, meaning that it holds some polymorphic type 'element
+ * and a sets of 'element.*)
+
+
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""

@@ -1,15 +1,15 @@
-<firstname> <lastname>
+Taylor Koth
 CSCI 305
 Spring 2018
 Lab Questions
 =======================
-1.
+1. The output you get from running f[3, 1, 4, 1, 5, 9] is: val it = [4,2,5,2,6,10] : int list.
 
-2.
+2. The function f takes in an int list and in each element of the list, adds 1 to it and changes the element to the new number.
 
-3.
+3. From line 12 of the code: (*Bind x to the head of the int list, and xs to the tail. Then, add one to the head and recursively call the function on the tail.*)
 
-4.
+4. From line 13 of the code: (*Define the function. The function will take in an int list and output a different int list*)
 
 5.
 
