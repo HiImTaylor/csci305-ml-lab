@@ -19,14 +19,11 @@ dataype 'element set =
     Empty
   | Set of 'element * 'element set;
 
-(*This function will determine if an element 'e' is part of the set, set. It will return true if 'e' is a memeber of the set, set. Otherwise, it will return false.*)
-fun isMember e set =
-  case set
-      of Empty => NONE
-      | e'::set' =>
-        if e = e'
-        then SOME e
-        else isMember e set';
+(* This function will determine if an element 'e' is part of the set, set.
+ * It will return true if 'e' is a memeber of the set, set.
+ * Otherwise, it will return false.*)
+fun isMember e Empty = false
+  | isMember e (Set (x,xs)) = e = x orelse isMember e xs;
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
@@ -56,7 +53,7 @@ list2Set [6, 2, 2];
 list2Set ["x", "y", "z", "x"];
 
 (* Question 1 *)
-f [3, 1, 4, 1, 5, 9]
+f [3, 1, 4, 1, 5, 9];
 
 (* Question 5 *)
 val quest5 = isMember "one" (list2Set ["1", "2", "3", "4"]);
