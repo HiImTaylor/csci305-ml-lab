@@ -1,0 +1,34 @@
+Taylor Koth
+CSCI 305
+Spring 2018
+Lab Questions
+=======================
+1. The output you get from running f[3, 1, 4, 1, 5, 9] is: val it = [4,2,5,2,6,10] : int list.
+
+2. The function f takes in an int list and in each element of the list, adds 1 to it and changes the element to the new number.
+
+3. From line 12 of the code: (*Bind x to the head of the int list, and xs to the tail. Then, add one to the head and recursively call the function on the tail.*)
+
+4. From line 13 of the code: (*Define the function. The function will take in an int list and output a different int list*)
+
+5. False. Logically, it should be false, as the function is looking for a string of "one" but that isn't the same as the string "1". Logically, this is the correct output.
+
+6. This isMember function uses tail recursion.
+
+7. The output for the call is { it was the best of times, it was the worst of times }.
+
+8. Tail recursion allows for optimizations to be made that normally can't be made. This is because the recursive call is the very last thing that is executed.
+
+9. The output I get is { green eggs and ham }.
+
+10. The output I get is { and macaroni macaroni and cheese }
+
+11. I like that some of the potentially more complex functions in ML are made simpler using patterns. I feel that had we been in another language, the Union and Intersect functions would have been very messy and not as nice to look at.
+
+12. I dislike the majority of the language as a whole. It felt like reading code was more complex and difficult. If I didn't give the code my undivided attention, I would lose where I was and my understanding of the code would go out the window and I would have to start over again.
+
+13. I kind of enjoyed the lab. It really made me have to think about the syntax of the language. The challenge of this I enjoyed. However, the frustration I got from trying to understand the syntax was also unfun.
+
+14. 11 hours between thinking about concepts and actual coding/debugging.
+
+15. I personally don't ever plan on using ML again in the future. The only time I would use it again would be for another class or for employment purposes. 
